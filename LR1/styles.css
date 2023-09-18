@@ -4,6 +4,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background-color: white;
+}
+
 .primary-color {
     background-color: #53A17E;
 }
