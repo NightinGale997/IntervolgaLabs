@@ -111,7 +111,7 @@ body {
     margin-left: 8px;
     width: 6em;
 }
-.review-btn {
+.tabs-btns .active {
     border-bottom: 3px solid transparent;
     padding-bottom: 10px;
     border-bottom-color: #53a17e;

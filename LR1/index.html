@@ -421,23 +421,76 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row tabs-btns">
-                <div class="col-6">
-                    <button class="btn rounded-0 fs-4">Подробнее о товаре</button>
-                    <button class="btn review-btn rounded-0 fs-4">Отзывы</button>
+            <ul class="nav nav-tabs tabs-btns" role="tablist">
+                <li class="nav-item btn review-btn rounded-0 fs-5" role="presentation">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab" style="">Подробности о товаре</a>
+                </li>
+                <li class="nav-item btn review-btn rounded-0 fs-5" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" role="tab" style="" tabindex="-1">Отзывы</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active show" id="home" role="tabpanel">
+                    <div class="row d-flex mt-5">
+                        <div class="col-4 fw-bold ">
+                            <h1>Описание</h1>
+                            <p class="mt-5">
+                                Универсальное комплексное удобрение.
+                                Имеет сбалансированный состав и позволяет эффективно подкармливать все виды комнатных и
+                                балконных цветов и растений.
+                                Содержат полный комплекс макро- и микроэлементов, необходимый для получения максимальных
+                                результатов.
+                                <br><br>
+                                Норма расхода:
+                                5г удобрения (1 чайная ложка) растворите в 2 литрах воды.
+                                - Корневая подкормка 1 раз в 7-10 дней. С ноября по февраль 1 раз в месяц.
+                                25г хватает на 10л рабочего раствора, раствор используют как при обычном поливе.
+                                <br><br>
+                                Состав:
+                                Азот(N) - 23%, фосфор(Р2О2) - 11%, калий(К2О) - 23%, бор(В), медь(Сu), цинк(Zn),
+                                марганец(Мn), железо(Fe), молибден(Мо).
+                            </p>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3 row justify-content-between fw-bold border-bottom border-1 border-black">
+                                <div class="col">Артикул</div>
+                                <div class="col">1924</div>
+                            </div>
+                            <div class="mb-3 row justify-content-between fw-bold border-bottom border-1 border-black">
+                                <div class="col">Вес</div>
+                                <div class="col">0.028</div>
+                            </div>
+                            <div class="mb-3 row justify-content-between fw-bold border-bottom border-1 border-black">
+                                <div class="col">Производитель</div>
+                                <div class="col">7 семян</div>
+                            </div>
+                            <div class="mb-3 row justify-content-between fw-bold border-bottom border-1 border-black">
+                                <div class="col">Торговая марка</div>
+                                <div class="col">Грин Бэлт</div>
+                            </div>
+                            <div class="mb-3 row justify-content-between fw-bold border-bottom border-1 border-black">
+                                <div class="col">Страна производитель</div>
+                                <div class="col">Россия</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center text-center">
-                <div class="col-3 my-5 py-5">
-                    <h3 class="mt-5 fw-bold">На этот товар пока нет отзывов</h3>
-                    <button class="btn shopping-cart mt-3 btn-success primary-color fw-bold fs-5 border-0 rounded-4 py-2 w-100 me-3">
-                        Оставить отзыв
-                    </button>
+                <div class="tab-pane fade" id="profile" role="tabpanel">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-3 my-5 py-5">
+                            <h3 class="mt-5 fw-bold">На этот товар пока нет отзывов</h3>
+                            <button class="btn shopping-cart mt-3 btn-success primary-color fw-bold fs-5 border-0 rounded-4 py-2 w-100 me-3">
+                                Оставить отзыв
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row recommendation-text">
+            <div class="row recommendation-text mt-5">
                 <div class="p-0 col-6">
                     <div class="h2 fw-bold">Похожие товары</div>
                 </div>
