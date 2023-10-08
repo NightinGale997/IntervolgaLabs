@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.primary-color {
+    background-color: #53A17E;
+}
+.primary-text {
+    color: #53A17E;
+}
+.search-color {
+    background-color: #EAEAEA;
+}
+.secondary-color {
+    background-color: #BCD4C9;
+}
+.dolyami {
+    height:47px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    border: none;
+    margin: 0 0 10px;
+    border-radius: 16px;
+}
+.dolyami-text {
+    font-size: 13px;
+}
+.icon-wallet {
+    margin-right: 23px;
+    width: 49px;
+    height: 49px;
+    padding: 11px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+.dolyami-wrapper {
+    margin-top: 49px;
+    padding-top: 52px;
+    border-top: 1px solid #eaeaea;
+}
+.navbar-main {
+    height: 100px;
+}
+.nav-button-icon-first {
+    width: 285px;
+    height: 48px;
+    margin-left: 10px;
+}
+.nav-button-icon-second {
+    width: 580px;
+    height: 48px;
+}
+.subheader {
+    height: 36px;
+}
+.star-rating {
+    width: 40px;
+    font-size: 15px;
+}
+.bonuses {
+    background-color: #F7D154;
+    color: #9C6F26;
+    width: 120px;
+    font-size: 15px;
+}
+.favorite-btn {
+    width: 102px;
+}
+.shopping-cart {
+    flex-grow: 100;
+}
+.callback-btn {
+    width: 175px;
+}
+.btn-back {
+    height:48px;
+    width:165px;
+}
+.carousel-indicators [data-bs-target] {
+    width:89px;
+    height:89px;
+}
+.recommendation-text {
+    border-bottom: 2px solid #eaeaea;
+}
+.dolyami-montly-pay:after {
+    content: "";
+    background-color: rgba(0,0,0,.06);
+    border-radius: 6px;
+    height: 5px;
+    width: 95%;
+    display: block;
+}
+.dolyami-montly-pay-selected:after {
+    content: "";
+    background-color: #4288f9;
+    border-radius: 6px;
+    height: 5px;
+    width: 95%;
+    display: block;
+}
+.developer__logo {
+    margin-left: 8px;
+    width: 6em;
+}
+.tabs-btns .active {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 10px;
+    border-bottom-color: #53a17e;
+    border-style: solid;
+}
+.tabs-btns {
+    border-bottom: 2px solid #eaeaea;
+}
