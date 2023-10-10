@@ -1,6 +1,6 @@
 <?php
 require_once 'logic.php';
-$defaultValues = getValuesFromGET();
+$valuesFromGet = getValuesFromGET();
 $collectors = getCollectorsFromDb();
 $teams = getTeamsFromDb();
 ?>
@@ -125,7 +125,7 @@ $teams = getTeamsFromDb();
     <form class="w-50 mb-5" action="collectors.php" method="get">
         <div class="mb-3">
             <label for="inputName" class="form-label">Имя</label>
-            <input value="<?= $defaultValues['name']?>" name="name" type="text" class="form-control" id="inputName">
+            <input value="<?= $valuesFromGet['name']?>" name="name" type="text" class="form-control" id="inputName">
         </div>
         <div class="mb-3">
             <label for="inputSelect" class="form-label">Бригада</label>
@@ -135,16 +135,16 @@ $teams = getTeamsFromDb();
                     <option <?= isset($team['selected']) ? 'selected' : '' ?> value="<?=htmlspecialchars($team['id'])?>">
                         <?=htmlspecialchars($team['name'])?>
                     </option>
-                <?php endforeach?>
+                <?php endforeach;?>
             </select>
         </div>
         <div class="mb-3">
             <label for="inputPersonal" class="form-label">Персональная характеристика</label>
-            <textarea name="personal_description" type="text" class="form-control" id="inputPersonal"><?=$defaultValues['personal_description']?></textarea>
+            <textarea name="personal_description" type="text" class="form-control" id="inputPersonal"><?=$valuesFromGet['personal_description']?></textarea>
         </div>
         <div class="mb-3">
             <label for="inputBirthDate" class="form-label">Дата рождения</label>
-            <input value="<?= $defaultValues['birth_date']?>" name="birth_date" type="number" min="1935" max="2005" class="form-control" id="inputBirthDate">
+            <input value="<?= $valuesFromGet['birth_date']?>" name="birth_date" type="number" min="1935" max="2005" class="form-control" id="inputBirthDate">
         </div>
         <div class="d-flex flex-row">
             <button type="submit" class="btn btn-primary me-3">Применить фильтры</button>
