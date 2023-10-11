@@ -132,9 +132,15 @@ $teams = getTeamsFromDb();
             <select name="id_team" id="inputSelect" class="form-select">
                 <option <?= empty($_GET['id_team']) ? 'selected' : '' ?> value="">Не выбрано</option>
                 <?php foreach ($teams as $team): ?>
-                    <option <?= isset($team['selected']) ? 'selected' : '' ?> value="<?=htmlspecialchars($team['id'])?>">
-                        <?=htmlspecialchars($team['name'])?>
-                    </option>
+                    <?php if ($team['id'] == $_GET['id_team']): ?>
+                        <option selected value="<?=htmlspecialchars($team['id'])?>">
+                            <?=htmlspecialchars($team['name'])?>
+                        </option>
+                    <?php else: ?>
+                        <option value="<?=htmlspecialchars($team['id'])?>">
+                            <?=htmlspecialchars($team['name'])?>
+                        </option>
+                    <?php endif ?>
                 <?php endforeach;?>
             </select>
         </div>

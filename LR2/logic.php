@@ -11,21 +11,21 @@ function getCollectorsFromDb(): array {
         INNER JOIN teams ON collectors.id_team = teams.id WHERE 1=1 ';
     $arBinds = [];
     if (count($_GET) > 0) {
-        if(!empty($_GET['id_team']) && (int)$_GET['id_team'] == $_GET['id_team']) {
+        if(!empty($_GET['id_team']) && intval($_GET['id_team'])) {
             $sql .= " AND collectors.id_team = :id_team";
-            $arBinds['id_team'] = htmlspecialchars($_GET['id_team']);
+            $arBinds['id_team'] = $_GET['id_team'];
         }
         if(!empty($_GET['name'])) {
             $sql .= " AND collectors.name LIKE :name";
-            $arBinds['name'] = '%' . htmlspecialchars($_GET['name']) . '%';
+            $arBinds['name'] = '%' . $_GET['name'] . '%';
         }
-        if(!empty($_GET['birth_date']) && (int)$_GET['birth_date'] == $_GET['birth_date']) {
+        if(!empty($_GET['birth_date']) && intval($_GET['birth_date'])) {
             $sql .= " AND birth_date = :birth_date";
-            $arBinds['birth_date'] = htmlspecialchars($_GET['birth_date']);
+            $arBinds['birth_date'] = $_GET['birth_date'];
         }
         if(!empty($_GET['personal_description'])) {
             $sql .= " AND personal_description LIKE :personal_description";
-            $arBinds['personal_description'] = '%' . htmlspecialchars($_GET['personal_description']) . '%';
+            $arBinds['personal_description'] = '%' . $_GET['personal_description'] . '%';
         }
     }
     $sql .= ' ORDER BY collectors.id';
@@ -39,9 +39,6 @@ function getTeamsFromDb(): array {
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $teams = $stmt->fetchAll();
-    if (!empty($_GET['id_team'])) {
-        $teams[$_GET['id_team']-1]['selected'] = true;
-    }
     return $teams;
 }
 function getValuesFromGET(): array {
