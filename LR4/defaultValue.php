@@ -2,8 +2,8 @@
 function getValuesFromPost() {
     $defaultValue = '';
 
-    if (isset($_POST['text'])) {
-        $defaultValue = $_POST['text'];
+    if (isset($_POST['textarea'])) {
+        $defaultValue = $_POST['textarea'];
     }
 
     return $defaultValue;
