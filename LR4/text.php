@@ -15,12 +15,6 @@ $defaultValue = getValuesFromPost();
         </form>
         <?php if (isset($_POST['button']) && !empty($_POST['textarea'])): ?>
             <?php include "textLogic.php"; ?>
-            <?php if (!empty($images)): ?>
-                <div class="fs-3">Задание 2:</div>
-                <?php foreach ($images as $image): ?>
-                    <img src="<?= $image ?>">
-                <?php endforeach ?>
-            <?php endif ?>
             <?php if (!empty($replacedDashesInTexts)): ?>
                 <div class="fs-3">Задание 5:</div>
                 <div><?= $replacedDashesInTexts ?></div>

@@ -7,18 +7,6 @@ $replacedDotsInTexts = DotsReplacement($dom);
 $htmlWithoutRecurringStyles = RecurringClasses($dom);
 $replacedDashesInTexts = DashReplacement($dom);
 $headersWithHtml = GenerateHeaders($inputText);
-$images = GetImagesFromText($dom);
-
-function GetImagesFromText($dom)
-{
-    $source = [];
-    $images = $dom->getElementsByTagName('img');
-    foreach ($images as $image) {
-        $src = $image->getAttribute('src');
-        $source[] = $src;
-    }
-    return $source;
-}
 
 function DashReplacement($dom)
 {
